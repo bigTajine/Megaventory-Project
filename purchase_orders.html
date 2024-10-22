@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purchase Orders</title>
     <style>
+        /* Basic styling for the body */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 20px;
         }
+        /* Styling for headers */
         h2, h3 {
             color: #333;
         }
+        /* Styling for the unordered list */
         ul {
             list-style-type: none;
             padding: 0;
         }
+        /* Styling for each list item */
         li {
             background-color: #fff;
             border: 1px solid #ddd;
@@ -26,16 +30,20 @@
             border-radius: 5px;
             transition: box-shadow 0.3s ease;
         }
+        /* Add a shadow on hover */
         li:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        /* Styling for links */
         a {
             text-decoration: none;
             color: #007bff;
         }
+        /* Add underline on hover */
         a:hover {
             text-decoration: underline;
         }
+        /* Styling for order details section */
         .order-details {
             background-color: #fff;
             border: 1px solid #ddd;
@@ -44,28 +52,35 @@
             margin-top: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        /* Styling for tables */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+        /* Styling for table headers and cells */
         th, td {
             padding: 12px;
             border: 1px solid #ddd;
             text-align: left;
         }
+        /* Styling for table headers */
         th {
             background-color: #007bff;
             color: #fff;
         }
+        /* Styling for table data cells */
         td {
             background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
+    <!-- List to display purchase orders -->
     <ul id="order-list"></ul>
+    <!-- Container to display order details -->
     <div id="order-details" class="order-details"></div>
+    <!-- Link to the JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>

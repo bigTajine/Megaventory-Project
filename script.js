@@ -1,10 +1,12 @@
+// Fetch the JSON data
 fetch('data.json')
-    .then(response => response.json())
+    .then(response => response.json()) // Convert response to JSON
     .then(data => {
-        const purchaseOrders = data.mvPurchaseOrders;
-        const orderList = document.getElementById('order-list');
-        const orderDetails = document.getElementById('order-details');
+        const purchaseOrders = data.mvPurchaseOrders; // Get the purchase orders array
+        const orderList = document.getElementById('order-list'); // Grab the order list element
+        const orderDetails = document.getElementById('order-details'); // Grab the order details element
 
+        // Create list items for each order
         purchaseOrders.forEach((order, index) => {
             const li = document.createElement('li');
             const a = document.createElement('a');
@@ -15,6 +17,7 @@ fetch('data.json')
             orderList.appendChild(li);
         });
 
+        // Show details for a specific order
         function showOrderDetails(index) {
             const order = purchaseOrders[index];
             orderDetails.innerHTML = `
@@ -40,7 +43,7 @@ fetch('data.json')
                     `).join('')}
                 </table>
             `;
-            orderDetails.style.display = 'block';
+            orderDetails.style.display = 'block'; // Make the details visible
         }
     })
-    .catch(error => console.error('Error fetching JSON:', error));
+    .catch(error => console.error('Error fetching JSON:', error)); // Handle errors
